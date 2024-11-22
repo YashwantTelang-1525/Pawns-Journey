@@ -1,0 +1,356 @@
+/* Header and Navbar Styling */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+h1 {
+  color: #f39c12;
+  font-size: x-large;
+  font-weight: 800;
+  padding-left: 10px;
+  text-align: center;
+  animation: fadeSlideIn 4s ease-out;
+}
+h2{
+  color: #f39c12;
+  
+  font-weight: 600;
+  padding-left: 10px;
+  text-align: center;
+  animation: fadeSlideIn 4s ease-out;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: black;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px; /* Limit max width */
+  display: flex;
+  
+  justify-content: right; /* Center the links */
+}
+
+.nav-links {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+  font-weight: bold; /* Bold text */
+  font-size: 18px; /* Font size */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+/* Home background styling */
+@keyframes zoomFadeInBackground {
+  0% {
+    background-size: 100%;
+    opacity: 0;
+  }
+  100% {
+    background-size: 110%;
+    opacity: 1;
+  }
+}
+
+.home {
+  min-height: 100vh;
+  background-color: black;
+  background-image: url(../../assets/images/blackking.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevents background repeat */
+  animation: zoomFadeInBackground 10s ease-in-out forwards;
+  animation-iteration-count: 1; /* Ensures the animation only runs once */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .home {
+    background-size: cover; /* Maintain full coverage on smaller screens */
+    animation: none; /* Disable animation for better mobile performance */
+  }
+}
+
+/* Container for the image and text */
+.center-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Floating text styling */
+.floating-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+/* Center image styling */
+.center-image {
+  width: 200px;
+  height: auto;
+  transition: transform 0.1s ease;
+  pointer-events: none;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+/* 3D Text Styling */
+.three-d-text {
+  font-size: 90px;
+  padding: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.5),
+    4px 4px 0 rgba(0, 0, 0, 0.4),
+    6px 6px 0 rgba(0, 0, 0, 0.3),
+    8px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+}
+
+/* Section Styling */
+.section {
+  padding: 90px 20px;
+  box-sizing: border-box;
+}
+
+.about-us-section {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Contact Section*/
+.contact-section {
+  background-color: #444;
+  color: white;
+  text-align: center;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f39c12;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #555; /* Slightly lighter background for input fields */
+  color: black; /* Text color */
+  border: 1px solid #f39c12; /* Border color */
+  padding: 10px;
+  margin: 10px 0; /* Space between fields */
+  width: 80%; /* Full width */
+  max-width: 400px; /* Max width to keep them from being too wide */
+}
+
+/* Contact Section Form */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section input, .contact-section textarea {
+  width: 300px;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-section button {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+  background-color: #e67e22;
+}
+
+/* Courses Section Styling */
+.courses-section {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  
+}
+
+.payment-message {
+  font-size: 1.1rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+/* Course Cards */
+.course-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.course-card {
+  background: #333333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+.course-card h3 {
+  font-size: 1.8rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.course-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #cccccc;
+}
+
+.course-card button {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.course-card button:hover {
+  background-color: #e67e22;
+}
+
+/* Feedback and Contact Container */
+.contact-feedback-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.feedback-container, .contact-container {
+  flex: 1;
+  padding: 30px;
+  background: rgba(15, 118, 110, 0.8);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.confirmation-dialog {
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #333;
+  color: green;
+}

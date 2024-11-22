@@ -1,0 +1,231 @@
+<header class="header">
+  <h1 style=" align-items: center; font-size: x-large; text-align: left; font-weight: 800; padding-left: 10px;">
+    PAWNS JOURNEY
+  </h1>
+<br>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home" (click)="scrollToHome()">Home</a></li>
+      <li><a href="#courses" (click)="scrollToCourses()">Courses</a></li>
+      <li><a href="#about-us" (click)="toggleAboutUs()">About Us</a></li>
+      <li><a href="#contact" (click)="scrollToContact()">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="home" (mousemove)="onMouseMove($event)">
+    <div class="floating-text">
+      <h2 class="three-d-text">Welcome to Pawns Journey</h2>
+    </div>
+    <div class="center-image-container">
+      <!-- <img src="/assets/images/pawni.png" alt="Center Image" class="center-image" /> -->
+    </div>
+  </div>
+</section>
+
+<!-- Courses Section -->
+<section #coursesSection id="courses" class="courses-section">
+  <div class="container">
+    <h2 class="section-title">Our Courses</h2>
+    <p *ngIf="paymentStatusMessage" class="payment-message">{{ paymentStatusMessage }}</p>
+    
+    <div class="course-cards">
+      
+      <div class="course-card">
+        <h3>BEGINNER</h3>
+        <h4>CATEGORY</h4>
+        <p>"New to chess? Start your journey here with our beginner's section. Learn the basics of chess, including piece movements, fundamental strategies, and essential tactics to help you get started on your chess adventure."</p>
+        <ul class="leading-relaxed mb-3 fade-in" style="color: white;">
+          <li class="fade-in">1. Introduction to Chess</li>
+          <li class="fade-in">2. The Chessboard and Pieces</li>
+          <li class="fade-in">3. Basic Moves and Rules</li>
+          <li class="fade-in">4. Opening Principles</li>
+          <li class="fade-in">5. Basic Strategies and Tactics</li>
+          <li class="fade-in">6. Endgame Fundamentals</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <h3>INERMEDIATE</h3>
+        <h4>CATEGORY</h4>
+        <p> "Ready to take your chess skills to the next level? Dive into our intermediate chess section, where you'll build upon your foundational knowledge. Explore more advanced tactics, positional concepts, and strategic principles to sharpen your chess acumen."</p>
+        <ul class="leading-relaxed mb-3 fade-in" style="color: white;">
+          <li class="fade-in">1. Advanced Opening Principles</li>
+          <li class="fade-in">2. Tactical Patterns and Combinations</li>
+          <li class="fade-in">3. Strategic Planning and Positional Understanding</li>
+          <li class="fade-in">4. Middle Game Strategies</li>
+          <li class="fade-in">5. Pawn Structures and Endgames</li>
+          <li class="fade-in">6. Study of Master Games</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <h3>ADVANCED</h3>
+        <h4>CATEGORY</h4>
+        <p>"Are you a seasoned chess player looking for a challenge? Delve into our advanced chess section, where you'll find in-depth analyses, master-level strategies, and complex tactical puzzles. Take your game to new heights as you explore the nuances of grandmaster-level play."</p>
+        <ul class="leading-relaxed mb-3 fade-in" style="color: white;">
+          <li class="fade-in">1. Advanced Endgame Techniques</li>
+          <li class="fade-in">2. Mastering Complex Pawn Structures</li>
+          <li class="fade-in">3. Advanced Tactical Patterns and Combination</li>
+          <li class="fade-in">4. Strategic Planning at Grandmaster Level</li>
+          <li class="fade-in">5. Opening Repertoire Building</li>
+          <li class="fade-in">6. Analysis of World-Class Games</li>
+        </ul>
+      </div>
+    </div><br><br>
+    <div class="course-cards">
+      <div class="course-card">
+        <h3>BEGINNER</h3>
+        <h4>₹1500/Month</h4>
+        <p>"Online sessions are held twice weekly, on Saturdays and Sundays, with each session lasting one hour."</p>
+        <button (click)="openPayment('BEGINNER', 1500)">Pay Now</button>
+      </div>
+      <div class="course-card">
+        <h3>INTERMEDIATE</h3>
+        <h4>₹2500/Month</h4>
+        <p>"Online sessions are held twice weekly, on Saturdays and Sundays, with each session lasting one hour."</p>
+        <button (click)="openPayment('INTERMEDIATE', 2500)">Pay Now</button>
+      </div>
+      <div class="course-card">
+        <h3>ADVANCED</h3>
+        <h4>₹3000/Month</h4>
+        <p>"Online sessions are held twice weekly, on Saturdays and Sundays, with each session lasting one hour."</p>
+        <button (click)="openPayment('ADVANCED', 3000)">Pay Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-us-section" style="padding: 25px;">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="flex flex-col sm:flex-row mt-10">
+    <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+      <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <div class="flex flex-col items-center text-center justify-center">
+        <h2 class="font-medium title-font mt-4 text-white-900 text-lg">Yashwant Telang</h2>
+        <p class="text-gray-400">Founder</p>
+        
+        <p class="text-base">I am a passionate chess instructor with over a year of experience in teaching students of various skill levels. I have represented my university and competed at the All India level, bringing valuable tournament experience to my teaching. With a FIDE rating of 1715, my goal is to help you improve your game and achieve your chess ambitions.</p>
+      </div>
+    </div>
+    <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-2 pt-2 sm:mt-0 text-center sm:text-left">
+      <p class="leading-relaxed text-ls mb-4">Our institute is dedicated to providing the best chess learning experience for beginners and intermediate players alike. Whether you're looking to earn your FIDE rating or simply want to enhance your skills as a club player, our expert instructors are here to guide you every step of the way.
+        With over a year of experience in teaching chess, we understand the unique needs of each student. Our carefully curated curriculum and organized chess materials ensure that you receive comprehensive instruction tailored to your skill level.
+        Join us today and embark on your journey to becoming a confident and skilled chess player!</p>
+      
+        <section class="text-white-600 body-font">
+          <div class="container px-5 py-18 mx-auto">
+            <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Progressive Chess Mentors</h1>
+              <p class="lg:w-1/2 w-full leading-relaxed text-white-500">"From strategic insights to personalized feedback, our trainers bring deep knowledge and genuine care, helping students advance their skills with every lesson."</p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <circle cx="12" cy="7" r="4"></circle>
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Swapnil Kant</h2>
+                  <p class="leading-relaxed text-base">Swapnil is an experienced chess player with a classical rating of 1726. His extensive experience in tournament play provides him with a deep insight into advanced chess strategies and endgame techniques.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <circle cx="12" cy="7" r="4"></circle>
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Shreyas Gaikwad</h2>
+                  <p class="leading-relaxed text-base">With over 4 years of experience as a Chess Coach, I've trained 30+ students and I have led my University team as captain for 3 years and won the Chess Championship twice.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Pruthviraj Chaudhari</h2>
+                  <p class="leading-relaxed text-base">Pruthviraj is a formidable chess player with a rapid rating of 1822. His mastery of opening theory and solid mid-game strategies sets him apart as a coach who can guide students to achieve significant improvements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+    </div>
+  </div>
+
+
+
+    
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section" style="padding: 25px;">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p>Questions, inquiries, or interested in scheduling a demo session? Reach out to us - we're here to assist you!</p><p> and 
+        We value your feedback and strive to continuously improve our services. Please take a moment to share your thoughts:
+      </p>
+      <form #contactForm (submit)="sendEmail($event)">
+        <input type="text" id="user_name" name="user_name" placeholder="Your Name" required />
+        <input type="email" id="user_email" name="user_email" placeholder="Your Email" required />
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <!-- Add this paragraph to display success/error messages -->
+      <p *ngIf="successMessage">{{ successMessage }}</p>
+    </div>
+  </section>
+
+  <footer class="text-white body-font" style="background-color: black;">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <span class="ml-3 text-xl">Pawn's Journey</span>
+      </a>
+      <p class="text-sm text-yellow-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">email us —
+        <a [attr.href]="'mailto:yashwanttelang@pawns-journey.com'" class="text-white ml-1" rel="noopener noreferrer" target="_blank">yashwanttelang&#64;pawns-journey.com</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  
