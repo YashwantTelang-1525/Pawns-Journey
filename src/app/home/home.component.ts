@@ -9,7 +9,7 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.general.css', './home.component.sections.css']
 })
 export class HomeComponent {
   @ViewChild('aboutSection') aboutSection!: ElementRef;

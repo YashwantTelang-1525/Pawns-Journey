@@ -1,0 +1,171 @@
+/* Navbar and Header */
+.header {
+    position: fixed;
+    width: 100%;
+    background: #000;
+    z-index: 10;
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: right;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f39c12;
+  }
+  
+  /* Home Section */
+  .home {
+    min-height: 100vh;
+    background-color: #000;
+    background-image: url(../../assets/images/blackking.jpg);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoomFadeInBackground 10s ease-in-out forwards;
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      background-size: cover;
+      animation: none;
+    }
+  }
+  
+  .center-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .floating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    font-size: 2rem;
+    z-index: 2;
+  }
+  
+  .center-image {
+    width: 200px;
+    height: auto;
+    transition: transform 0.1s ease;
+    pointer-events: none;
+  }
+  
+  /* Course Cards */
+  .course-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .course-card {
+    background: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .course-card h3 {
+    font-size: 1.8rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+  
+  .course-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .course-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+  }
+  
+  .course-card button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .course-card button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact-section button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-section button:hover {
+    background-color: #e67e22;
+  }
+  

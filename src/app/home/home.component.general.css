@@ -1,0 +1,66 @@
+/* Animations */
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomFadeInBackground {
+    0% {
+      background-size: 100%;
+      opacity: 0;
+    }
+    100% {
+      background-size: 110%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) translateY(0px);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-20px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0px);
+    }
+  }
+  
+  /* General Styles */
+  h1,
+  h2 {
+    color: #f39c12;
+    font-weight: 800;
+    padding-left: 10px;
+    text-align: center;
+    animation: fadeSlideIn 4s ease-out;
+  }
+  
+  h1 {
+    font-size: x-large;
+  }
+  
+  h2 {
+    font-weight: 600;
+  }
+  
+  button {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
