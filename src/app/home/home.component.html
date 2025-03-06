@@ -14,18 +14,32 @@
 </header>
 
 <section id="home">
-  <div class="home" (mousemove)="onMouseMove($event)">
+  <div class="home">
+    <!-- Floating Text on the Left -->
     <div class="floating-text">
-      <h2 class="three-d-text">Welcome to Pawns Journey</h2>
+
     </div>
-    <div class="center-image-container">
-      <!-- <img src="/assets/images/pawni.png" alt="Center Image" class="center-image" /> -->
+
+    <!-- Services Text Section -->
+    <div class="services-text">
+      <h1>Your Learning Journey Starts Here</h1>
+      <h3>Our Services</h3>
+      <ul>
+        <li>Comprehensive Chess Training</li>
+        <li>Interactive Online Chess Classes</li>
+        <li>Personalized Coaching for All Levels</li>
+        <li>Strategic Game Analysis & Improvement</li>
+        <li>Regular Tournaments & Practice Matches</li>
+      </ul>
     </div>
   </div>
 </section>
 
+
+
+
 <!-- Courses Section -->
-<section #coursesSection id="courses" class="courses-section" style="background-color: black;">
+<section #coursesSection id="courses" class="courses-section" style="background-color: black; background-image: url('../../assets/images/bgabus6.png');">
   <div class="container">
     <h1 class="section-title ">Our Courses</h1>
     <p *ngIf="paymentStatusMessage" class="payment-message">{{ paymentStatusMessage }}</p>
@@ -96,7 +110,7 @@
 </section>
 
 <!-- About Us Section -->
-<section id="about-us" class="about-us-section" style="padding: 25px;background-color: black; ">
+<section id="about-us" class="about-us-section" style="padding: 25px;background-color: black;background-image: url('../../assets/images/bgabus5.png');">
   <div class="container">
     <h1 class="section-title">About Us</h1>
     <div class="flex flex-col sm:flex-row mt-10">
@@ -108,10 +122,10 @@
         </svg>
       </div>
       <div class="flex flex-col items-center text-center justify-center">
-        <h2 class="font-medium title-font mt-4 text-white-900 text-lg">Yashwant Telang</h2>
+        <h2 class="font-medium title-font mt-4 text-white text-lg">Yashwant Telang</h2>
         <p class="text-gray-400">Founder</p>
         
-        <p class="text-base text-white">I am a passionate chess instructor with over a year of experience in teaching students of various skill levels. I have represented my university and competed at the All India level, bringing valuable tournament experience to my teaching. With a FIDE rating of 1715, my goal is to help you improve your game and achieve your chess ambitions.</p>
+        <p class="text-base text-white ">I am a passionate chess instructor with over a year of experience in teaching students of various skill levels. I have represented my university and competed at the All India level, bringing valuable tournament experience to my teaching. With a FIDE rating of 1715, my goal is to help you improve your game and achieve your chess ambitions.</p>
       </div>
     </div>
     <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-2 pt-2 sm:mt-0 text-center sm:text-left">
@@ -177,9 +191,9 @@
 
 
 <!-- Contact Section -->
-<section id="contact" class="contact-section" style="padding: 25px; background-color: #222; color: #fff; text-align: center;">
+<section id="contact" class="contact-section" style="padding: 25px; background-color: #222; color: #fff; text-align: center;background-image: url('../../assets/images/wkbk.jpg');">
   <div class="container" 
-       style="max-width: 400px; margin: 0 auto; background: #333; padding: 30px; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);">
+       style="max-width: 400px; margin: 0 auto; background: transparent; padding: 30px; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); ">
     <h2 class="section-title" style="font-size: 2rem; margin-bottom: 20px; color: #f39c12;">Contact Us</h2>
     <p style="margin-bottom: 20px; font-size: 1rem; line-height: 1.5;">
       Questions, inquiries, or interested in scheduling a demo session? Reach out to us - we're here to assist you!
@@ -204,6 +218,8 @@
   </div>
 </section>
 
+
+<app-feedback></app-feedback>
 
   <footer class="text-white body-font" style="background-color: black;">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">

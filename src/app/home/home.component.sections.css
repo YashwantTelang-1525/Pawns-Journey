@@ -36,54 +36,88 @@
   .nav-links a:hover {
     color: #f39c12;
   }
-  
-  /* Home Section */
+
+/* Home Section */
+.home {
+  min-height: 100vh;
+  background-color: #000;
+  background-image: url(../../assets/images/hmbg3.png);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoomFadeInBackground 10s ease-in-out forwards;
+  padding: 0 5%;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
   .home {
-    min-height: 100vh;
-    background-color: #000;
-    background-image: url(../../assets/images/blackking.jpg);
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
     background-size: cover;
-    background-repeat: no-repeat;
-    animation: zoomFadeInBackground 10s ease-in-out forwards;
+    animation: none;
   }
-  
-  @media (max-width: 768px) {
-    .home {
-      background-size: cover;
-      animation: none;
-    }
-  }
-  
-  .center-image-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .floating-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+}
+
+
+
+/* Services Text Section */
+.services-text {
+  width: 40%;
+  max-width: 400px;
+ 
+  padding: 20px;  
+  margin-top: 15px;
+  border-radius: 10px;
+  text-align: center;
+  /* box-shadow: 0 9px 31px rgba(81, 143, 160, 0.5); */
+}
+
+.services-text h3 {
+  font-size: 1.8rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.services-text ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+
+.services-text li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    animation: float 3s ease-in-out infinite;
-    font-size: 2rem;
-    z-index: 2;
+    padding: 22px;
   }
-  
-  .center-image {
-    width: 200px;
-    height: auto;
-    transition: transform 0.1s ease;
-    pointer-events: none;
+  .services-text {
+    width: 80%;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .services-text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-text {
+    width: 95%;
+  }
+} 
   /* Course Cards */
   .course-cards {
     display: flex;
@@ -93,12 +127,12 @@
   }
   
   .course-card {
-    background: #333;
+    background: transparent;
     border-radius: 8px;
     padding: 20px;
     width: 280px;
     text-align: center;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 9px 31px rgba(81, 143, 160, 0.5); */
     transition: transform 0.3s ease;
   }
   
@@ -168,4 +202,5 @@
   .contact-section button:hover {
     background-color: #e67e22;
   }
+  
   

@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validator } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { FeedbackComponent } from "../feedback/feedback.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FeedbackComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.general.css', './home.component.sections.css']
 })
@@ -42,6 +43,23 @@ export class HomeComponent {
         this.paymentStatusMessage = `Payment for ${level} level was cancelled.`;
       }
     });
+  }
+
+  images = [
+    
+    '../../assets/images/students1.jpg',
+    '../../assets/images/students2.jpg',
+    '../../assets/images/students3.jpg',
+    
+  ];
+  currentIndex = 0;
+
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
   openPayment(level: string, amount: number) {

@@ -1,0 +1,29 @@
+<div class="feedback-container">
+    <p class="feedback-intro">
+        Hear from our students! Their experiences and feedback showcase the dedication and quality of our chess training.
+    </p>
+
+    <section class="feedback-section">
+        <div class="feedback-wrapper">
+            <!-- Left Arrow -->
+            <button class="arrow left-arrow" (click)="prevSlide()" [disabled]="currentIndex === 0">
+                &#10094;
+            </button>
+
+            <!-- Feedback Cards Container -->
+            <div class="feedback-slider-wrapper">
+                <div class="feedback-slider" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
+                    <div class="feedback-card" *ngFor="let feedback of feedbacks">
+                        <p class="feedback-text">"{{ feedback.text }}"</p>
+                        <h2 class="feedback-author">- {{ feedback.author }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="arrow right-arrow" (click)="nextSlide()" [disabled]="currentIndex === feedbacks.length - 1">
+                &#10095;
+            </button>
+        </div>
+    </section>
+</div>
