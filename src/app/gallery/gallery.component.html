@@ -1,0 +1,29 @@
+<div class="gallery-container">
+    <p class="gallery-intro">
+        Moments from our chess journey — captured with passion and dedication.
+    </p>
+
+    <section class="gallery-section">
+        <div class="gallery-wrapper">
+
+            <!-- Left Arrow -->
+            <button class="arrow left-arrow" (click)="prevImage()" [disabled]="currentIndex === 0">
+                &#10094;
+            </button>
+
+            <!-- Slider -->
+            <div class="gallery-slider-wrapper">
+                <div class="gallery-slider" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
+                    <div class="gallery-card" *ngFor="let img of galleryImages">
+                        <img [src]="img" alt="Gallery Image" class="gallery-img" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="arrow right-arrow" (click)="nextImage()" [disabled]="currentIndex === galleryImages.length - 1">
+                &#10095;
+            </button>
+        </div>
+    </section>
+</div>

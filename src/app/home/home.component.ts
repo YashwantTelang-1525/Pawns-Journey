@@ -4,11 +4,13 @@ import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validator } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FeedbackComponent } from "../feedback/feedback.component";
+import { GalleryComponent } from "../gallery/gallery.component";
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FeedbackComponent],
+  imports: [CommonModule, FeedbackComponent, GalleryComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.general.css', './home.component.sections.css']
 })
@@ -158,6 +160,13 @@ export class HomeComponent {
     const contactSection = document.querySelector('.contact-section');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToGallery() {
+    const element = document.getElementById('Gallery');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

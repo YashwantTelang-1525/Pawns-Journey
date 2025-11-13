@@ -1,0 +1,87 @@
+.gallery-container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: black;
+}
+
+.gallery-intro {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+    animation: fadeSlideIn 4s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-slider-wrapper {
+    width: 900px;
+    overflow: hidden;
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-card {
+  width: 320px;       /* FIXED WIDTH */
+  height: 360px;      /* FIXED HEIGHT */
+  margin: 0 10px;
+  flex-shrink: 0;     /* Prevents card from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Ensures image fills the card neatly */
+  border-radius: 10px;
+}
+
+.arrow {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #FFD700;
+}
+
+.arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-slider-wrapper {
+        width: 250px;
+    }
+    .gallery-card {
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
