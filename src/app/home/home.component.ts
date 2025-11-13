@@ -93,6 +93,7 @@ export class HomeComponent {
       }
     };
 
+    
     const rzp1 = new (window as any).Razorpay(razorpayOptions);
 
     rzp1.on('payment.failed', (response: any) => {
@@ -169,4 +170,6 @@ export class HomeComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  
+
 }
