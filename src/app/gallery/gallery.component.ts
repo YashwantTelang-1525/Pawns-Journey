@@ -19,7 +19,7 @@ export class GalleryComponent {
     'assets/gallery/5.jpg',
     'assets/gallery/6.jpg',
     'assets/gallery/7.jpg',
-    'assets/gallery/8.jpg',
+    'assets/gallery/8.jpg','assets/gallery/20.jpg','assets/gallery/21.jpg',
     'assets/gallery/17.jpg','assets/gallery/18.jpg','assets/gallery/19.jpg',
   ];
 
